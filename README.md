@@ -1,16 +1,17 @@
 # local_auth_test
 
-A new Flutter project.
+A flutter project to determine an error at 'local_auth' package of flutter that 'Dark theme breaks the dialog of local_auth'
 
-## Getting Started
+## Test results
 
-This project is a starting point for a Flutter application.
+Tested on android device HUAWEISNE-L01 (Huawei Mate 20 Lite) | sdk: 29
+The actual result is that:
 
-A few resources to get you started if this is your first Flutter project:
+- In light theme it is working just fine,
+![image](https://github.com/flutter/flutter/assets/29236412/b23a686c-5dd3-4392-8c31-9824e2af6a96)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- In the dark theme the dialog background color will stay same as white,
+The background color of the bottom area (grey area on light dialog) of the dialog will be same as background,
+The texts will not be visible (probably using colors from dark_theme: white on white-background)
+Also the cancel button's text style changed a little. (less font weight)
+![image](https://github.com/flutter/flutter/assets/29236412/ee1c5bcf-c43a-4def-9cb8-bd73b0caaa5d)
